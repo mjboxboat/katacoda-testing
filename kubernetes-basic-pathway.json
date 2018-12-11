@@ -1,0 +1,12 @@
+{
+    "title": "Kubernetes Basic Training Series",
+    "description": "This series is presented by BoxBoat on Youtube and in our blog.",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "module-1",
+        "title": "Kubernetes Training: Module 1",
+        "description": "In this lab, we will examine the Docker CLI and execute our first container."
+      }
+    ]
+  }
