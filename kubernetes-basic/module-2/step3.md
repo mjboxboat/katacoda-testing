@@ -1,24 +1,18 @@
-The below commands will work with images to create and list containers.
+Lastly, we will clone a the Vote App Github repo and run the application on the cluster.
 
-- Take inventory of current images and containers `docker image ls`{{execute}} `docker container ls`{{execute}}
+- First, lets clone the Github repo. `git clone https://github.com/dockersamples/example-voting-app.git`{{execute}}
+- Now lets change to that directory and deploy the environment.
+  -  `cd example-voting-app`{{execute}}
+  -  This creates a new namespace called vote. `kubectl create namespace vote`{{execute}}
+  -  This will deploy all of the YAML configurations in the k8s-specification folder. `kubectl apply -f k8s-specification`{{execute}}
 
-- Run hello-world image `docker container run hello-world`{{execute}} Notice how the image did not need to be downloaded since we already downloaded it in step 2.
+Now lets monitor the deployment status of the Vote components.
+- `watch -n .5 kubectl get pods,deploy,svc -o wide -n vote`{{execute}}
 
-- What if we delete hello-world image from the local machine? `docker image rmi -f hello-world`{{execute}}. 
+Once they are all running, press "ctrl + c" to exit the watch.
 
-- Now try to run the hello-world container again, this time defining the name hello-world. 
-  - `docker run --name hello-world hello-world`{{execute}}.
- 
-Notice how the image is automatically downloaded from the container image registry.
+Lets view the app, vote on a pet, then view the results.
+- To vote, click this link: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/
+- To view results, click this link: https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/
 
-Look at the running containers `docker container ls`{{execute}} The hello-world container is not listed because it ran to completion.
-
-Look at all containers including stopped `docker container ls -a`{{execute}} Now we see hello-world listed as a stopped container and is named "hello-world" because we defined that container name at runtime.
-
-Display all information about a container. In this case, let's inspect hello-world. `docker container inspect hello-world`{{execute}} This command displays extensive information about the container. Take some time to look it over.
-
-- Some other container commands:
-    - List running containers `docker container ps`{{execute}}
-    - List all containers `docker container ps -a`{{execute}}
-    - List most recent 2 containers `docker container ps -n 2`{{execute}}
-    - List the last container run `docker container ps -l`{{execute}}
+That concludes the Intro To Kubernetes lab. Please reach out to use at BoxBoat if you have any questions of if you are interested in training for your organization. https://boxboat.com/company/contact-us/ 
