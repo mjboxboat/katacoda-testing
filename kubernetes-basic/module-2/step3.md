@@ -15,4 +15,4 @@ Lets view the app, vote on a pet, then view the results.
 - To vote, click this link: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/
 - To view results, click this link: https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/
 
-That concludes the Intro To Kubernetes lab. Please reach out to use at BoxBoat if you have any questions of if you are interested in training for your organization. https://boxboat.com/company/contact-us/ 
+That concludes the Module 2 - Intro To Kubernetes lab. Please reach out to use at BoxBoat if you have any questions of if you are interested in training for your organization. https://boxboat.com/company/contact-us/ 
