@@ -4,7 +4,7 @@ Lastly, we will clone a the Vote App Github repo and run the application on the 
 - Now lets change to that directory and deploy the environment.
   -  `cd example-voting-app`{{execute}}
   -  This creates a new namespace called vote. `kubectl create namespace vote`{{execute}}
-  -  This will deploy all of the YAML configurations in the k8s-specification folder. `kubectl apply -f k8s-specification`{{execute}}
+  -  This will deploy all of the YAML configurations in the k8s-specification folder. `kubectl apply -f k8s-specifications`{{execute}}
 
 Now lets monitor the deployment status of the Vote components.
 - `watch -n .5 kubectl get pods,deploy,svc -o wide -n vote`{{execute}}
