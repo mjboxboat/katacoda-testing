@@ -8,5 +8,7 @@ First, lets make sure our cluster is ready and we can run basic "kubectl" comman
 
 - Now lets check the status of the cluster components
   - This shows the nodes in the cluster. `kubectl get nodes`{{execute}}
-  - This will show the kubernetes system pods running. `kubctl get pods -n kube-system`{{execute}}
+  - This will show the kubernetes system pods running. `kubectl get pods -n kube-system`{{execute}}
   - This will show the current pods, deployments, deployments and namespaces. `kubectl get pods,deploy,svc,ns`{{execute}}
+
+In the next step, we will deply the Kubernetes UI (Dashboard).

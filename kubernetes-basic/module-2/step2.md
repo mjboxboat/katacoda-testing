@@ -1,13 +1,7 @@
-The below commands will let you work with images.
+Lets deploy the Kubernetes UI (Dashboard) and take a quick look around.
 
--  List images `docker image ls`{{execute}}
-  
--  Pull hello-world image from the container image registry (in this case, Docker Hub) `docker image pull hello-world`{{execute}}
+- To deploy the dashboard, run the following command. `kubectl apply -f https://gist.githubusercontent.com/mjboxboat/9601f7aff786f52bce3f4af7e21b8339/raw/572f1c056c9385fb5ebc8a55a64717331028b284/kube-dash.yml`{{execute}}
+- Now we can check to see if the Dashboard pod is running. `kubectl get pods -n kube-system`{{execute}}
+- And we can also check to see what port the Dashboard is exposed on. `kubectl get svc -n kube-system`{{execute}}
 
-- Pull the latest Alpine image from the container image registry `docker image pull alpine:latest`{{execute}}
-
--  List images on the local machine `docker image ls`{{execute}}
-
-- Remove images stored locally `docker image rmi alpine:latest`{{execute}}
-
-- List images again. Note that Alpine is no longer listed `docker image ls`{{execute}}
+In the next step, we will deply the Kubernetes UI (Dashboard).
