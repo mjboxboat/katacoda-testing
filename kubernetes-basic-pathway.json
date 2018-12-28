@@ -11,7 +11,7 @@
       {
         "course_id": "module-2",
         "title": "Kubernetes Training: Module 2",
-        "description": "Demo"
+        "description": "Quick Demo of the Kubernetes UI and an example application called Vote"
       }
     ]
   }
