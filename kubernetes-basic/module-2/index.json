@@ -1,56 +1,30 @@
 {
-  "title": "Kubernetes Training: Module 1 - Docker Basics",
-  "description": "In this lab, we will examine the Docker CLI and execute our first container.",
+  "title": "Kubernetes Web UI and App Demo",
+  "description": "Quick Demo of the Kubernetes UI and an example application called Vote",
   "details": {
     "steps": [
       {
-        "title": "Run Basic Docker Commands",
+        "title": "Step 1",
         "text": "step1.md"
       },
       {
-        "title": "Docker Image Basics",
+        "title": "Step 2",
         "text": "step2.md"
       },
       {
-        "title": "Run Your First Container",
-        "text": "step3.md"
-      },
-      {
-        "title": "Run Interactive Commands",
-        "text": "step4.md"
-      },
-      {
-        "title": "Run a Container Detached",
-        "text": "step5.md"
-      },
-      {
-        "title": "View Container Logs",
-        "text": "step6.md"
-      },
-      {
-        "title": "Start, Stop, Remove Container",
-        "text": "step7.md"
-      },
-      {
-        "title": "Clean Up Images",
-        "text": "step8.md"
-      },
-      {
-        "title": "More Container Examples",
-        "text": "step9.md"
+        "title": "Step 3",
+        "text": "step2.md"
       }
     ],
-    "intro": {
-      "text": "intro.md"
-    },
     "finish": {
       "text": "finish.md"
     }
   },
   "environment": {
+    "hideintro": true,
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "docker"
+    "imageid": "kubernetes-cluster"
   }
 }
