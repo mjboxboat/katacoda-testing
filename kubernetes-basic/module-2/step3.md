@@ -9,7 +9,7 @@ Lastly, we will clone a the Vote App Github repo and run the application on the 
 Now lets monitor the deployment status of the Vote components.
 - `watch -n .5 kubectl get pods,deploy,svc -o wide -n vote`{{execute}}
 
-Once they are all running, press "ctrl + c" to exit the watch.
+Once they are all running, press *"CTRL+C"* to exit the watch.
 
 Lets view the app, vote on a pet, then view the results.
 - To vote, click this link: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/
