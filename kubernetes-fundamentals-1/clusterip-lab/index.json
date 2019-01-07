@@ -24,14 +24,13 @@
     },
     "assets": {
       "host01": [
-          {"file": "pod.yaml", "target": "/usr/local/bin"},
-          {"file": "service.yaml", "target": "/usr/local/bin"}
+          {"file": "pod.yaml", "target": "/root/clusterip-lab"},
+          {"file": "service.yaml", "target": "/root/clusterip-lab"}
       ]
     }
   },
   "environment": {
-    "uilayout": "editor-terminal",
-    "uisettings": "yaml"
+    "uilayout": "editor-terminal"
   },
   "backend": {
     "imageid": "kubernetes"
