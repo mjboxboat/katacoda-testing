@@ -1,0 +1,1 @@
+Welcome to the Boxboat Kubernetes Fundamentals I ClusterIP Lab. This lab will provide an example on exposing pods using service leveraging the NodePort.
