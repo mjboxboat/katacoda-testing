@@ -1,0 +1,12 @@
+{
+    "title": "Kubernetes Fundamentals I",
+    "description": "Lab exercises for Kubernetes Fundamentals I",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "wordpress-basic",
+        "title": "WordPress Lab",
+        "description": "Deploying WordPress via Kubernetes"
+      }
+    ]
+  }
