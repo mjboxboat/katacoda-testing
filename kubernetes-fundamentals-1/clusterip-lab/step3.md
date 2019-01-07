@@ -1,14 +1,27 @@
-Welcome to Kubernetes Fundamentals Training - Module 2 - Intro to Kubernetes
+In this step we will deploy a Service that exposes the HTTP server pods using a ClusterIP.
 
-This lab will demonstrate how quickly Kubernetes can deploy containers and complex working applications and expose them for external access. 
+This step will make the service/pods accessible on a single IP from anywhere within the cluster.
 
-First, lets make sure our cluster is ready and we can run basic "kubectl" commands.
+Follow along and enter the below service specification in the service.yaml file on the right.
 
-- Run the following command to make sure that Kubernetes is ready. `launch.sh`{{execute}}
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: http-server-service
+spec:
+  selector:
+    app: http-server
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+```
 
-- Now lets check the status of the cluster components
-  - This shows the nodes in the cluster. `kubectl get nodes`{{execute}}
-  - This will show the kubernetes system pods running. `watch -n .5 kubectl get pods -n kube-system`{{execute}} Once all pods show as "running" you can proceed to the next step. Hit *"CTRL+C"* to exit the watch.
-  - This will show the current pods, deployments, deployments and namespaces. `kubectl get pods,deploy,svc,ns -n kube-system`{{execute}}
+Now let's apply the service file in Kubernetes.
+- Deploy the service into k8s using the services.yaml file. `kubectl apply -f services.yaml`{{execute}}
+- Check to make sure the service was deployed and what ClusterIP was assigned. `kubectl get svc -o wide`{{execute}}
+- Run a curl against the ClusterIP shown for the http-server-service. `curl CLUSTERIP` (*you will need to type this manually using the clusterip of your specific service*)
+- Run the curl again and notice that each time you run it, a different pod behind the service responds. `curl CLUSTERIP`.
 
-In the next step, we will deply the Kubernetes UI (Dashboard).
+You have now successfully deployed multiple pods and exposed them to the rest of the cluster using a ClusterIP. In the next section we will learn how to expose services/pods outside the cluster using NodePort.

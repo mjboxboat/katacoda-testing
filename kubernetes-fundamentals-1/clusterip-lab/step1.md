@@ -1,4 +1,4 @@
-*Please review the below information while your Kubernetes evironment is deployed.*
+*Please review the below information while your Kubernetes environment is deployed. This will take 2-3 minutes.*
 
 Although each Pod has a unique IP address, those IPs are not exposed outside the cluster without a Service. Services allow your applications to receive traffic. Services can be exposed in different ways by specifying a type in the ServiceSpec:
 
