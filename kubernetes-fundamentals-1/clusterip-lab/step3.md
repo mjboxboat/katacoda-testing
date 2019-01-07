@@ -19,9 +19,9 @@ spec:
 ```
 
 Now let's apply the service file in Kubernetes.
-- Deploy the service into k8s using the services.yaml file. `kubectl apply -f services.yaml`{{execute}}
+- Deploy the service into k8s using the services.yaml file. `kubectl apply -f service.yaml`{{execute}}
 - Check to make sure the service was deployed and what ClusterIP was assigned. `kubectl get svc -o wide`{{execute}}
-- Run a curl against the ClusterIP shown for the http-server-service. `curl CLUSTERIP` (*you will need to type this manually using the clusterip of your specific service*)
-- Run the curl again and notice that each time you run it, a different pod behind the service responds. `curl CLUSTERIP`.
+- Run a curl against the ClusterIP shown for the http-server-service. `curl YOURCLUSTERIP` (*you will need to type this manually using the clusterip of your specific service*)
+- Run the curl a few more times (press up arrow to show command again) and notice that each time you run it, a different pod behind the service responds.
 
 You have now successfully deployed multiple pods and exposed them to the rest of the cluster using a ClusterIP. In the next section we will learn how to expose services/pods outside the cluster using NodePort.
