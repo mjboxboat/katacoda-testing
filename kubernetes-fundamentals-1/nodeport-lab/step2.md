@@ -29,7 +29,7 @@ spec:
 ```
 
 Now let's apply the deployment file in Kubernetes.
-- Switch to the clusterip-lab directory `cd clusterip-lab`{{execute}}
+- Switch to the clusterip-lab directory `cd nodeport-lab`{{execute}}
 - Deploy the HTTP server into k8s using the deployment file. `kubectl apply -f deployment.yaml`{{execute}}
 - Check to make sure there are 2 HTTP pods running. `kubectl get pods -o wide`{{execute}}
 - Lastly, lets check to make sure we can access the pods using curl.

@@ -16,7 +16,9 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    nodeport: 30080
+    targetPort: 80
+    nodePort: 30080
+  sessionAffinity: None
 ```
 
 https://[[HOST_SUBDOMAIN]]-30080-[[KATACODA_HOST]].environments.katacoda.com/
