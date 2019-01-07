@@ -1,5 +1,5 @@
 {
-  "title": "KF1 - ClusterIP Lan",
+  "title": "KF1 - ClusterIP Lab",
   "description": "Lab showing how to expose a service using ClusterIP",
   "details": {
     "steps": [
@@ -21,10 +21,16 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+          {"file": "pod.yaml", "target": "/root"},
+          {"file": "service.yaml", "target": "/root"}
+      ]
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "editor-terminal"
   },
   "backend": {
     "imageid": "kubernetes"
