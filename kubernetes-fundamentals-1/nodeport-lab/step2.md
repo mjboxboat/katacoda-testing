@@ -4,7 +4,7 @@ In the file browser on the right, click the "nodeport-lab" directory and click t
 
 **NOTE:** The editor here automatically saves changes to the files. You just need to enter the information and it will auto-save.
 
-Below is the specification for the Deployment. Please follow along and enter the spec into the "deployment.yaml". 
+Below is the specification for the Deployment. Please follow along and enter the spec into the *deployment.yaml*. 
 
 ```yaml
 apiVersion: apps/v1
