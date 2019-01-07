@@ -24,13 +24,14 @@
     },
     "assets": {
       "host01": [
-          {"file": "pod.yaml", "target": "/root"},
-          {"file": "service.yaml", "target": "/root"}
+          {"file": "pod.yaml", "target": "/usr/local/bin"},
+          {"file": "service.yaml", "target": "/usr/local/bin"}
       ]
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+    "uisettings": "yaml"
   },
   "backend": {
     "imageid": "kubernetes"
