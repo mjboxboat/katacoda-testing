@@ -24,7 +24,7 @@
     },
     "assets": {
       "host01": [
-          {"file": "pod.yaml", "target": "/root/clusterip-lab"},
+          {"file": "deployment.yaml", "target": "/root/clusterip-lab"},
           {"file": "service.yaml", "target": "/root/clusterip-lab"}
       ]
     }
