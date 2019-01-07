@@ -7,6 +7,11 @@
         "course_id": "wordpress-basic",
         "title": "WordPress Lab",
         "description": "Deploying WordPress via Kubernetes"
+      },
+      {
+        "course_id": "clusterip-lab",
+        "title": "ClusterIP Lab",
+        "description": "Exposing a Service Using ClusterIP"
       }
     ]
   }
