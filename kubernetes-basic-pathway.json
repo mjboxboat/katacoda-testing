@@ -1,17 +1,22 @@
 {
-    "title": "Kubernetes Training Fundamentals Series",
+    "title": "Kubernetes Training Basic Training Series",
     "description": "This series is presented by BoxBoat on Youtube and in our blog.",
     "icon": "fa-katacoda",
     "courses": [
       {
         "course_id": "module-1",
-        "title": "Kubernetes Training: Module 1",
+        "title": "Kubernetes Basic Training: Module 1 - Intro To Docker",
         "description": "In this lab, we will examine the Docker CLI and execute our first container."
       },
       {
         "course_id": "module-2",
-        "title": "Kubernetes Training: Module 2",
+        "title": "Kubernetes Basic Training: Module 2 - Intro To Kubernetes",
         "description": "Quick Demo of the Kubernetes UI and an example application called Vote"
+      },
+      {
+        "course_id": "module-3",
+        "title": "Kubernetes Basic Training: Module 3 - Kubernetes Pods",
+        "description": "Demo of how to run containers in Pods on Kubernetes"
       }
     ]
   }
