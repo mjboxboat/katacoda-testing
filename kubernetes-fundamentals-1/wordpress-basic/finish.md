@@ -1,1 +1,0 @@
-Congratulations, you have completed Kubernetes Fundamentals I! If you finish early, feel free to assist other participants.
