@@ -1,0 +1,69 @@
+{
+  "title": "Understanding Kubernetes Pods",
+  "icon": "fa-kubernetes",
+  "description": "Introduction to Pods in Kubernetes",
+  "difficulty": "beginner",
+  "time": "45-60 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": ".answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Pods on the command line",
+        "text": "step1.md"
+      },
+      {
+        "title": "PodSpec Files",
+        "text": "step2.md"
+      },
+      {
+        "title": "Interacting with Pods",
+        "text": "step3.md"
+      },
+      {
+        "title": "Configuring NGiNX",
+        "text": "step4.md"
+      },
+      {
+        "title": "Multi-container Pods",
+        "text": "step5.md"
+      },
+      {
+      	"title": "Sharing Volumes",
+      	"text": "step6.md"
+      },
+      {
+      	"title": "Pod IPC",
+      	"text": "step7.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "./startup.sh",
+      "credits": "Please email feedback to: `training@boxboat.com`"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "dashboard": "Dashboard",
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training.\u001b[0m"
+    },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

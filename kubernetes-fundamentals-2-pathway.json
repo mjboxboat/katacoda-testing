@@ -1,0 +1,33 @@
+{
+  "title": "Kubernetes Fundamentals II",
+  "description": "Learn advanced concepts such as Ingress, ConfigMaps/Secrets, Persistent Volumes, and Cluster Operations.",
+  "icon": "fa-katacoda",
+  "private": true,
+  "courses": [
+    {
+      "course_id": "00-review",
+      "title": "KF I Review",
+      "description": "Review Kubernetes Fundamentals I course topics"
+    },
+    {
+      "course_id": "01-services",
+      "title": "Kubernetes Services",
+      "description": "Configure networking for your Pods"
+    },
+    {
+      "course_id": "02-voting-app",
+      "title": "Docker Voting App",
+      "description": "Deploy the Docker Voting App"
+    },
+    {
+      "course_id": "03-ingress",
+      "title": "Ingress Demonstration",
+      "description": "Abstract Kubernetes Services"
+    },
+    {
+      "course_id": "04-helm",
+      "title": "Helm",
+      "description": "Use Helm, the de-facto package manager for Kubernetes"
+    }
+  ]
+}

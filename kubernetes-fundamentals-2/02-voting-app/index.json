@@ -1,0 +1,70 @@
+{
+  "title": "Voting App Lab",
+  "description": "In this lab, we will configure and deploy the Docker Voting App",
+  "difficulty": "intermediate",
+  "time": "45-60 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": "/.answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [{
+        "title": "Voting App Architecture",
+        "text": "step1.md"
+      },
+      {
+        "title": "Creating the DB",
+        "text": "step2.md"
+      },
+      {
+        "title": "Creating Redis",
+        "text": "step3.md"
+      },
+      {
+        "title": "Creating the Result Microservice",
+        "text": "step4.md"
+      },
+      {
+        "title": "Creating the Vote Microservice",
+        "text": "step5.md"
+      },
+      {
+        "title": "Creating the Worker Microservice",
+        "text": "step6.md"
+      },
+      {
+        "title": "Debugging the Voting App",
+        "text": "step7.md"
+      },
+      {
+        "title": "Interacting with the Voting App",
+        "text": "step8.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "startup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com"}],
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training.\u001b[0m"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

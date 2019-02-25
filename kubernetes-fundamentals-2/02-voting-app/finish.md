@@ -1,0 +1,1 @@
+Congratulations, you have completed Kubernetes Fundamentals II! If you finish early, feel free to assist other participants.

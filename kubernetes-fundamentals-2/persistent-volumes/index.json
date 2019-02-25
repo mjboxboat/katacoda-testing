@@ -1,0 +1,61 @@
+{
+  "title": "Kubernetes Fundamentals II - PersistentVolumes",
+  "description": "In this lab, we will create PersistentVolumes, and provide them to Pods via PersistentVolumeClaims",
+  "difficulty": "intermediate",
+  "time": "15-20 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": "/.answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [{
+        "title": "Local Volumes",
+        "text": "step1.md"
+      },
+      {
+        "title": "Creating a PersistentVolume",
+        "text": "step2.md"
+      },
+      {
+        "title": "Creating a PersistentVolumeClaim",
+        "text": "step3.md"
+      },
+      {
+        "title": "Adding Storage to Pods",
+        "text": "step4.md"
+
+      },
+      {
+        "title": "Clean-Up",
+        "text": "step5.md"
+
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "startup.sh",
+      "credits": "Please email feedback to: `training@boxboat.com`"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "dashboard": "Dashboard",
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training.\u001b[0m"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

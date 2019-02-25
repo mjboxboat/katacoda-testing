@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ??
+  labels:
+    ??: ??
+spec:
+  type: NodePort
+  selector:
+    ??: ??
+  ports:
+   - port: ??         # Port other Pods use within the cluster to access the service
+     targetPort: ??   # Port that the Pod is listening on
+     nodePort: ??     # Port to expose on all nodes in the cluster

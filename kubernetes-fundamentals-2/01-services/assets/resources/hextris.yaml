@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hextris
+spec:
+  selector:
+    matchLabels:
+      app: hextris
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hextris
+    spec:
+      containers:
+      - name: hextris
+        image: boxboat/hextris
+        ports:
+        - containerPort: 80

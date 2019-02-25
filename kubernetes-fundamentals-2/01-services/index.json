@@ -1,0 +1,67 @@
+{
+  "title": "Services",
+  "description": "Learn how Kubernetes Services provide access to Pods and Deployments",
+  "difficulty": "intermediate",
+  "time": "30-45 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Intro to Services",
+        "text": "step1.md"
+      },
+      {
+        "title": "Create a Deployment",
+        "text": "step2.md"
+      },
+      {
+        "title": "ClusterIPs on the Command Line",
+        "text": "step3.md"
+      },
+      {
+        "title": "ClusterIP Manifests",
+        "text": "step4.md"
+      },
+      {
+        "title": "Pod-to-Pod communication",
+        "text": "step5.md"
+      },
+      {
+        "title": "Using a NodePort",
+        "text": "step6.md"
+      },
+      {
+        "title": "Hextris",
+        "text": "step7.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": "Please email feedback to: `training@boxboat.com`",
+      "courseData": "startup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": "/.answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training.\u001b[0m"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

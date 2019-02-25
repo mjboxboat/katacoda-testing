@@ -1,0 +1,69 @@
+{
+  "title": "All Kubernetes Labs",
+  "description": "Testing Purposes Only - All K8s Labs",
+  "courses": [
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/00-k8s-intro",
+      "course_id": "00-k8s-intro",
+      "title": "First Kubernetes Lab",
+      "description": "An Introduction to Katacoda and Kubernetes"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/01-k8s-architecture",
+      "course_id": "01-k8s-architecture",
+      "title": "Kubernetes Architecture",
+      "description": "Learn about Kubernetes Architecture"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/02-pods",
+      "course_id": "02-pods",
+      "title": "Kubernetes Pods",
+      "description": "Learn everything you need to know about Pods"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/03-deployments",
+      "course_id": "03-deployments",
+      "title": "Kubernetes Deployments",
+      "description": "Get experience with Deployments"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-2/00-review",
+      "course_id": "00-review",
+      "title": "Review",
+      "description": "Review day 1 course material"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-2/01-services",
+      "course_id": "01-services",
+      "title": "Kubernetes Services",
+      "description": "Configure networking for your Pods"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-2/02-voting-app",
+      "course_id": "02-voting-app",
+      "title": "Docker Voting App",
+      "description": "Deploy the Docker Voting App"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-2/03-ingress",
+      "course_id": "03-ingress",
+      "title": "Ingress Demonstration",
+      "description": "Abstract Kubernetes Services"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-2/04-helm",
+      "course_id": "03-helm",
+      "title": "Helm",
+      "description": "Use Helm, the de-facto package manager"
+    }
+  ]
+}

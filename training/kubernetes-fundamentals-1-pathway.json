@@ -1,0 +1,76 @@
+{
+  "title": "Kubernetes Fundamentals I",
+  "description": "Learn the basics of Kubernetes Architecture, controllers, and objects in this introductory course.",
+  "courses": [
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/first-kubernetes-lab",
+      "course_id": "first-kubernetes-lab",
+      "title": "First Kubernetes Lab",
+      "description": "An Introduction to Using Kubernetes"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/pod-lab-01",
+      "course_id": "pod-lab-01",
+      "title": "Intro to Pods",
+      "description": "Start deploying your applications in Pods"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/pod-lab-02",
+      "course_id": "pod-lab-02",
+      "title": "Multi-Container Pods",
+      "description": "Learn about Multi-Container Pods"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/pod-lab-03",
+      "course_id": "pod-lab-03",
+      "title": "Pod Networking and Lifecycle",
+      "description": "Learn about how pods work"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/rs-lab-01",
+      "course_id": "rs-lab-01",
+      "title": "ReplicaSet Lab",
+      "description": "Learn about the foundation of a Kubernetes Deployment, a ReplicaSet "
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/deployment-cli",
+      "course_id": "deployment-cli",
+      "title": "Deployment CLI Lab",
+      "description": "Manage your applications with a Deployment on the CLI"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/deployment-manifest",
+      "course_id": "deployment-manifest",
+      "title": "Deployment Manifest Lab",
+      "description": "Manage your applications with a Deployment Manifest file"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/clusterip-lab",
+      "course_id": "clusterip-lab",
+      "title": "ClusterIP Lab",
+      "description": "Expose a Service Using Kubernetes ClusterIP"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/nodeport-lab",
+      "course_id": "nodeport-lab",
+      "title": "NodePort Lab",
+      "description": "Expose a Service Using Kubernetes NodePort"
+    },
+    {
+      "pathway_id": "boxboat",
+      "id": "kubernetes-fundamentals-1/wordpress-basic",
+      "course_id": "wordpress-basic",
+      "title": "WordPress Challenge Lab",
+      "description": "Configure and Deploy WordPress"
+    }
+  ]
+}

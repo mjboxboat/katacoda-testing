@@ -1,0 +1,1 @@
+Now that we understand how to create Deployments, you all know the basics of how to configure and deploy applications with Kubernetes. However, how do we access them in a more effective way? Tomorrow, we'll cover that, and more.

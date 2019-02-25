@@ -1,0 +1,57 @@
+{
+  "title": "KF1 Review",
+  "description": "Let's cover everything we learned during the first day",
+  "difficulty": "intermediate",
+  "time": "20-30 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": "/.answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [{
+        "title": "Kubectl",
+        "text": "step1.md"
+      },{
+        "title": "Labels and Selectors",
+        "text": "step2.md"
+      },
+      {
+        "title": "Pods",
+        "text": "step3.md"
+      },
+      {
+        "title": "ReplicaSets and Deployments",
+        "text": "step4.md"
+      },
+      {
+      	"title": "Configuring your Deployment",
+      	"text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": "Please email feedback to: `training@boxboat.com`",
+      "courseData": "startup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training.\u001b[0m"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

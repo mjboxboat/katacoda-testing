@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jwilder-deployment
+  labels:
+    app: jwilder
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jwilder
+  template:
+    metadata:
+      labels:
+        app: jwilder
+    spec:
+      containers:
+      - name: jwilder
+        image: jwilder/whoami
+        ports:
+        - containerPort: 8000

@@ -1,0 +1,1 @@
+Congratulations, you've just finished the tour of Katacoda and your first lab! From here on out, we'll learn about Kubernetes objects, and how to configure and deploy them.

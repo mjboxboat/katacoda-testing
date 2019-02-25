@@ -1,0 +1,1 @@
+We're completed Kubernetes Fundamentals II, you now have all of the basic building blocks to configure and deploy applications with Kubernetes!

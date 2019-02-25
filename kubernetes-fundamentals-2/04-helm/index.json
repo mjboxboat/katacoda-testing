@@ -1,0 +1,61 @@
+{
+  "title": "Helm Lab",
+  "description": "The De-Facto Package Manager",
+  "difficulty": "intermediate",
+  "time": "30-45 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": "/.answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [{
+        "title": "Installing Helm",
+        "text": "step1.md"
+      },
+      {
+        "title": "Deploying a Community Chart",
+        "text": "step2.md"
+      },
+      {
+        "title": "Modifying a Chart",
+        "text": "step3.md"
+      },
+      {
+        "title": "Creating a New Chart",
+        "text": "step4.md"
+      },
+      {
+        "title": "Upgrading a Chart",
+        "text": "step5.md"
+      },
+      {
+        "title": "Chart Operations",
+        "text": "step6.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "startup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training.\u001b[0m"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

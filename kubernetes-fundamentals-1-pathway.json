@@ -1,0 +1,28 @@
+{
+  "title": "Kubernetes Fundamentals I",
+  "description": "Learn the basics of Kubernetes Architecture, controllers, and objects in this introductory course.",
+  "icon": "fa-katacoda",
+  "private": true,
+  "courses": [
+    {
+      "course_id": "00-k8s-intro",
+      "title": "First Kubernetes Lab",
+      "description": "An Introduction to Katacoda and Kubernetes"
+    },
+    {
+      "course_id": "01-k8s-architecture",
+      "title": "Kubernetes Architecture",
+      "description": "Learn about Kubernetes architecture"
+    },
+    {
+      "course_id": "02-pods",
+      "title": "Kubernetes Pods",
+      "description": "Learn everything you need to know about Pods"
+    },
+    {
+      "course_id": "03-deployments",
+      "title": "Kubernetes Deployments",
+      "description": "Get experience with Deployments"
+    }
+  ]
+}

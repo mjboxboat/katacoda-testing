@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: path-ingress
+spec:
+  rules:
+  - host: training.boxboat.io
+    http:
+      paths:
+      - path: /tutum
+        backend:
+          serviceName: tutum-service
+          servicePort: 80
+    http:
+      paths:
+      - path: /jwilder
+        backend:
+          serviceName: jwilder-service
+          servicePort: 8000

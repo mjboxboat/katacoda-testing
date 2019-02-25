@@ -1,0 +1,63 @@
+{
+    "title": "Kubernetes Fundamentals II",
+    "description": "Learn advanced concepts such as Ingress, ConfigMaps/Secrets, Persistent Volumes, and Cluster Operations.",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "pathway_id": "boxboat",
+        "id": "kubernetes-fundamentals-2/recap",
+        "course_id": "recap",
+        "title": "1. Kubernetes Fundamentals I Review",
+        "description": "Review Kubernetes Fundamentals I course topics"
+      },
+      {
+        "pathway_id": "boxboat",
+        "id": "kubernetes-fundamentals-2/minecraft",
+        "course_id": "minecraft",
+        "title": "2. Minecraft Lab",
+        "description": "Deploy the Minecraft server, a real application used by tens of millions of people worldwide"
+      },
+      {
+        "pathway_id": "boxboat",
+        "id": "kubernetes-fundamentals-2/configmaps",
+        "course_id": "configmaps",
+        "title": "3. ConfigMaps Lab",
+        "description": "Decouple configuration from applications with Kubernetes ConfigMaps"
+      },
+      {
+        "pathway_id": "boxboat",
+        "id": "kubernetes-fundamentals-2/secrets",
+        "course_id": "secrets",
+        "title": "4. Secrets Lab",
+        "description": "Store sensitive data external to applications with Kubernetes Secrets"
+      },
+      {
+        "pathway_id": "boxboat",
+        "id": "kubernetes-fundamentals-2/persistent-volumes",
+        "course_id": "persistent-volumes",
+        "title": "5. Persistent Volumes and Claims",
+        "description": "Create and manage persistent storage wth Kubernetes Persistent Volumes and Claims"
+      },
+      {
+        "pathway_id": "boxboat",
+        "id": "kubernetes-fundamentals-2/operations",
+        "course_id": "operations",
+        "title": "6. Basic Cluster Operations",
+        "description": "Perform common cluster operations utilizing Kubernetes Namespaces and debugging"
+      },
+      {
+        "pathway_id": "boxboat",
+        "id": "kubernetes-fundamentals-2/wordpress-advanced",
+        "course_id": "wordpress-advanced",
+        "title": "7. Advanced WordPress Lab",
+        "description": "Deploy WordPress with advanced configuration with Kubernetes"
+      },
+      {
+        "pathway_id": "boxboat",
+        "id": "kubernetes-fundamentals-2/voting-app",
+        "course_id": "voting-app",
+        "title": "8. Voting App Lab",
+        "description": "Deploy the Docker Voting App via Kubernetes"
+      }
+    ]
+  }

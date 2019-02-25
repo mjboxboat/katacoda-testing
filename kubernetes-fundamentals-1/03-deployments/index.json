@@ -1,0 +1,73 @@
+{
+  "title": "Kubernetes Deployments",
+  "icon": "fa-kubernetes",
+  "description": "Introduction to Deployments",
+  "difficulty": "Intermediate",
+  "time": "45-60 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": ".answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "ReplicaSets",
+        "text": "step1.md"
+      },
+      {
+        "title": "Deployments on the CLI",
+        "text": "step2.md"
+      },
+      {
+        "title": "Deployment Manifests",
+        "text": "step3.md"
+      },
+      {
+        "title": "Interacting with Deployments",
+        "text": "step4.md"
+      },
+      {
+        "title": "Configuring Tutum",
+        "text": "step5.md"
+      },
+      {
+        "title": "Configuring NGiNX",
+        "text": "step6.md"
+      },
+      {
+        "title": "Configuring Minecraft",
+        "text": "step7.md"
+      },
+      {
+        "title": "Rolling Updates and Rollbacks",
+        "text": "step8.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "startup.sh",
+      "credits": "Please email feedback to: `training@boxboat.com`"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "dashboard": "Dashboard",
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training.\u001b[0m"
+    },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: name-virtual-host-ingress
+spec:
+  rules:
+  - host: tutum.training.boxboat.io
+    http:
+      paths:
+      - backend:
+          serviceName: tutum-service
+          servicePort: 80
+  - host: jwilder.training.boxboat.io
+    http:
+      paths:
+      - backend:
+          serviceName: jwilder-service
+          servicePort: 8000

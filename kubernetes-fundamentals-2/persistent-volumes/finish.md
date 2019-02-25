@@ -1,0 +1,1 @@
+Congratulations, you have the Persistent Volume lab! Next up, we'll dive right into cluster operations.

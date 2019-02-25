@@ -1,0 +1,17 @@
+{
+    "title": "Kubernetes Training Fundamentals Series",
+    "description": "This series is presented by BoxBoat on Youtube and in our blog.",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "module-1",
+        "title": "Kubernetes Training: Module 1",
+        "description": "In this lab, we will examine the Docker CLI and execute our first container."
+      },
+      {
+        "course_id": "module-2",
+        "title": "Kubernetes Training: Module 2",
+        "description": "Quick Demo of the Kubernetes UI and an example application called Vote"
+      }
+    ]
+  }
