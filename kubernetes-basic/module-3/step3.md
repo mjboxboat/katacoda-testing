@@ -23,6 +23,6 @@ Now, lets deploy the nginx pod using the file. `kubectl apply -f ./resources/pod
 Again, we can review if the Pod is running and view more information about the Pod using the following commands:
 `kubectl get pods -o wide`{{execute}}
 
-`kubectl describ pod my-nginx`{{execute}}
+`kubectl describe pod my-nginx`{{execute}}
 
 In the next step, we will see if we can access this pod both internally on the cluster an externally from the internet.

@@ -1,18 +1,13 @@
-Lastly, we will clone a the Vote App Github repo and run the application on the cluster.
+Let's see how we can show that the the Nginx service is running and accessible inside the pod. 
 
-- First, lets clone the Github repo. `git clone https://github.com/dockersamples/example-voting-app.git`{{execute}}
-- Now lets change to that directory and deploy the environment.
-  -  `cd example-voting-app`{{execute}}
-  -  This creates a new namespace called vote. `kubectl create namespace vote`{{execute}}
-  -  This will deploy all of the YAML configurations in the k8s-specification folder. `kubectl apply -f k8s-specifications`{{execute}}
+We can test this from 'inside' the cluster by running a curl from the command line against the pod.
 
-Now lets monitor the deployment status of the Vote components.
-- `watch -n .5 kubectl get pods,deploy,svc -o wide -n vote`{{execute}}
+First, lets run `kubectl get pods -o wide`{{execute}} to find the internal ip of the Pod.
 
-Once they are all running, press *"CTRL+C"* to exit the watch.
+Now, let's copy that IP and run `curl http://POD_IP`. You should see a block of text that includes "Welcome to nginx!".
 
-Lets view the app, vote on a pet, then view the results.
-- To vote, click this link: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/
-- To view results, click this link: https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/
+In the Pod spec, we exposed the port 80 of this pod. Let's see if we can get to nginx from outside the cluster on port 80 from the internet. https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
-That concludes the Module 2 - Intro To Kubernetes lab. Please reach out to use at BoxBoat if you have any questions of if you are interested in training for your organization. https://boxboat.com/company/contact-us/ 
+Whoops, looks like that isn't working. Any idea why? If you said "because there is no service yet", then you are correct. We haven't exposed the pod to the outside world using a Kubernetes Service, so it is only available inside the Kubernetes cluster for now.
+
+That completes the lab for module 3. In a future lab (Module 5) we will discuss Services. In the next Module (Module 4) we will discuss why you wouldn't want to run singleton pods like we did here and how we can run them using Kubernetes Deployments. Stay tuned.
