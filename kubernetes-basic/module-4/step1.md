@@ -25,6 +25,9 @@ spec:
     matchLabels:
       app: tutum
   template:
+    metadata:
+      labels:
+        app: tutum
     spec:
       containers:
       - name: tutum
