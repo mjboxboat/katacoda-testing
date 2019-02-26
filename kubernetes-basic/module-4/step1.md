@@ -46,6 +46,6 @@ Notice that 2 pods, a deployment and a replicaset were all created from that one
 
 Before we move on, lets query the pods to see that they are different.
 
-Run `kubectl get pods -o wide` and copy the pod IP for each and run a curl. Notice that the pods return different IDs inside tutum. This will come in handy in Module 5 when we discuss services.
+Run `kubectl get pods -o wide`{{execute}} and copy the pod IP for each and run a curl. Notice that the pods return different IDs inside tutum. This will come in handy in Module 5 when we discuss services.
 
 `curl POD_IP` (you will need to manually enter this command with you Pod IPs)
