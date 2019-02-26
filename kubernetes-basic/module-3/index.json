@@ -1,6 +1,6 @@
 {
-  "title": "Module 2: Kubernetes Web UI/App Demo",
-  "description": "Quick Demo of the Kubernetes UI and an example application called Vote",
+  "title": "Kubernetes Basic Training: Module 3 - Kubernetes Pods",
+  "description": "Demo of how to run containers in Pods on Kubernetes",
   "details": {
     "steps": [
       {
