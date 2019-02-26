@@ -16,30 +16,36 @@ In this next step, we will show standard Deployment file written in YAML and how
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tutum-deployment
+  name: http-deployment
   labels:
-    app: tutum
+    app: http
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: tutum
+      app: http
   template:
     metadata:
       labels:
-        app: tutum
+        app: http
     spec:
       containers:
-      - name: tutum
-        image: tutum/hello-world
+      - name: http
+        image: katacoda/docker-http-server
         ports:
         - containerPort: 80
 ```
 This is a basic Deployment file and that includes the additional instructions to run a ReplicaSet of 2 pods.
 
 Let's deploy this pod from the pre-created manifest file and then see all of the components that were created.
-`kubectl apply -f ./resources/tutum-deployment.yaml`{{execute}}
+`kubectl apply -f ./resources/http-deployment.yaml`{{execute}}
 
 `kubectl get pods,deploy,rs`{{execute}}
 
-Notice that a pod, a deployment and a replicaset were all created from that one file.
+Notice that 2 pods, a deployment and a replicaset were all created from that one manifest file.
+
+Before we move on, lets query the pods to see that they are different.
+
+Run `kubectl get pods -o wide` and copy the pod IP for each and run a curl. Notice that the pods return different IDs inside tutum. This will come in handy in Module 5 when we discuss services.
+
+`curl POD_IP` (you will need to manually enter this command with you Pod IPs)
