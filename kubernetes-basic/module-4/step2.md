@@ -13,6 +13,9 @@ metadata:
   labels:
     app: http-daemonset
 spec:
+  selector:
+    matchLabels:
+      name: http-daemonset
   template:
     metadata:
       labels:
