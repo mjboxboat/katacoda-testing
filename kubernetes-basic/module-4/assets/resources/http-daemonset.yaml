@@ -13,9 +13,6 @@ spec:
       labels:
         app: http-daemonset
     spec:
-      tolerations:
-      - key: node-role.kubrnetes.io/master
-        effect: Schedule
       containers:
       - name: http-daemonset
         image: katacoda/docker-http-server
