@@ -2,7 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tutum-deployment
+  labels:
+    app: tutum
 spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tutum
   template:
     spec:
       containers:
