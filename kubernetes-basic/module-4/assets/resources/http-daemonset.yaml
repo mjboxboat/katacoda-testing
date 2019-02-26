@@ -13,6 +13,9 @@ spec:
       labels:
         app: http-daemonset
     spec:
+      tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/master
       containers:
       - name: http-daemonset
         image: katacoda/docker-http-server
