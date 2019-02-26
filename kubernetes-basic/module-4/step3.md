@@ -1,28 +1,39 @@
-In this step we will create a Pod manifest (also called a Pod spec) using YAML. 
+In the last section we will check out the StatefulSet deployment type.
 
-The following syntax will create a pod using the A.K.M.S. structure we discussed and you will then be able to deploy the pod using this file.
+Like a Deployment , a StatefulSet manages Pods that are based on an identical container spec. Unlike a Deployment, a StatefulSet maintains a sticky identity for each of their Pods. These pods are created from the same spec, but are not interchangeable: each has a persistent identifier that it maintains across any rescheduling.
+
+More info on StatefulSets here: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+
+Let's see what a StatefulSet manifest file looks like.
 
 ```yaml
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: StatefulSet
 metadata:
-  name: my-nginx
+  name: http-statefulset
   labels:
-    app: web
+    app: http
 spec:
-  containers:
-  - name: my-nginx
-    image: nginx:latest
-    ports:
-      - containerPort: 80
+  replicas: 3
+  selector:
+    matchLabels:
+      app: http-statefulset
+  template:
+    metadata:
+      labels:
+        app: http-statefulset
+    spec:
+      containers:
+      - name: http-statefulset
+        image: katacoda/docker-http-server
+        ports:
+        - containerPort: 80
 ```
-We have already created this file for you, so you can view it by running `nano ./resources/pod.yaml`{{execute}}. Once you are done reviewing, you can exit by pressing `CTRL+X`.
 
-Now, lets deploy the nginx pod using the file. `kubectl apply -f ./resources/pod.yaml`{{execute}}
+We can see that this is almost exactly the same as the Deployment spec with just the "kind" being different.
 
-Again, we can review if the Pod is running and view more information about the Pod using the following commands:
-`kubectl get pods -o wide`{{execute}}
+Let's deploy the StatefulSet and see it differs from the standard Deployment.
 
-`kubectl describe pod my-nginx`{{execute}}
+`kubectl apply -f ./resource/http-statefulset.yaml`{{execute}}
 
-In the next step, we will see if we can access this pod both internally on the cluster an externally from the internet.
+`kubectl get pods,sts`{{execute}}
