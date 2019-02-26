@@ -24,9 +24,13 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com"}],
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training.\u001b[0m"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "kubernetes-cluster-running"
   }
 }
