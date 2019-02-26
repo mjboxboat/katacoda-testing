@@ -7,7 +7,7 @@ The Daemonset manifest file looks like this:
 
 ```yaml
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: http-daemonset
   labels:
