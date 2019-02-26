@@ -32,6 +32,6 @@ Notice that we removed the "replicas" section as this is not relevant to DaemonS
 
 Let's run the Daemonset and inspect what we get after.
 
-`kubectl apply -f http-daemonset.yaml`{{execute}}
+`kubectl apply -f ./resources/http-daemonset.yaml`{{execute}}
 
 `kubectl get pods,daemonset,rs`{{execute}}
