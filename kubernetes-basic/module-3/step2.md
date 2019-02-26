@@ -1,8 +1,15 @@
-Lets deploy the Kubernetes UI (Dashboard) and so you can have a UI to explore what we are deploying.
+Let's run a Pod from the CLI first. 
 
-- To deploy the dashboard, run the following command. `kubectl apply -f https://gist.githubusercontent.com/mjboxboat/d1d51560c485cdeb500fa1343a211469/raw/0fc3290dfb1fd66d1d2bbd957982999b37d52b6b/kube-dash.yaml`{{execute}}
-- Now we can check to see if the Dashboard pod is running. `kubectl get pods -n kube-system`{{execute}}
-- And we can also check to see what port the Dashboard is exposed on. `kubectl get svc -n kube-system`{{execute}}
-- Once the dashboard is up and running, we can visit the external URL on port 30000 by clicking this link: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/
+The following command will run a Pod named "nginx" with a container inside called "nginx" using the image "nginx:latest".
 
-In the next step, we will deploy a single pod using the `kubectl` CLI.
+`kubectl run nginx --image=nginx --replicas=1`{{execute}}
+
+Now lets check to see if the pod is up by issuing `kubectl get pods -o wide`{{execute}}
+
+We can see that there is a single nginx Pod running and we can also see the Pods internal IP and what node it is running on.
+
+We can also dig a bit deeper into this Pod by running `kubectl describe pod nginx`{{execute}}. This command shows us alot of information about the pod including namespace, the image used to launch, events and much more.
+
+Also, if we run `kubectl get deployment`{{execute}} we can see that a Deployment was automatically created to manage the Pod. We will discuss deployments in a future module.
+
+Let's remove this Pod for now and in the next section we will create a similar pod using a manifest YAML. `kubectl delete deploy nginx`{{execute}}
