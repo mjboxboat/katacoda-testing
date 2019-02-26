@@ -2,6 +2,14 @@
   "title": "Kubernetes Basic Training: Module 3 - Kubernetes Pods",
   "description": "Demo of how to run containers in Pods on Kubernetes",
   "details": {
+    "assets": {
+      "master": [
+        {
+          "file": "resources/*",
+          "target": "/root/resources"
+        }
+      ]
+    },
     "steps": [
       {
         "title": "Step 1",
@@ -26,14 +34,6 @@
     "finish": {
       "text": "finish.md"
     }
-  },
-  "assets": {
-    "master": [
-      {
-        "file": "resources/*",
-        "target": "/root/resources"
-      }
-    ]
   },
   "environment": {
     "uilayout": "terminal",
