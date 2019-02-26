@@ -18,10 +18,10 @@ spec:
 ```
 We have already created this file for you, so you can view it by running `nano ./resources/pod.yaml`{{execute}}. Once you are done reviewing, you can exit by pressing `CTRL+X`.
 
-Now, lets deploy the nginx pod using the file. `kubectl apply -f ./resources/pod.yaml`
+Now, lets deploy the nginx pod using the file. `kubectl apply -f ./resources/pod.yaml`{{execute}}
 
 Again, we can review if the Pod is running and view more information about the Pod using the following commands:
-`kubectl get pods -o wide`
-`kubectl describ pod nginx`
+`kubectl get pods -o wide`{{execute}}
+`kubectl describ pod nginx`{{execute}}
 
 In the next step, we will see if we can access this pod both internally on the cluster an externally from the internet.
