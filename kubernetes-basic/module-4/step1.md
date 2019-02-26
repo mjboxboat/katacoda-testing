@@ -1,14 +1,42 @@
-Welcome to Kubernetes Fundamentals Training - Module 2 - Intro to Kubernetes
+Welcome to the BoxBoat "Kubernetes Training" Basics series. This is Module 4, Kubernetes Deployments. In this lab we will cover the different types of deployments.
 
-This lab will demonstrate how quickly Kubernetes can deploy containers and complex working applications and expose them for external access. 
+It is important to note that Deployments leverage and automatically create "ReplicaSets" and use these to automatically restart pods if they crash as well an maintain the desired number of pods.
 
-First, lets make sure our cluster is ready and we can run basic "kubectl" commands.
+More about ReplicaSets and Deployments:
+Deployments: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+ReplicaSets: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 
-- Run the following command to make sure that Kubernetes is ready. `launch.sh`{{execute}}
+Replicasets can be managed outside of deployments, but that is outside the scope of this training.
 
-- Now lets check the status of the cluster components
-  - This shows the nodes in the cluster. `kubectl get nodes`{{execute}}
-  - This will show the kubernetes system pods running. `watch -n .5 kubectl get pods -n kube-system`{{execute}} Once all pods show as "running" you can proceed to the next step. Hit *"CTRL+C"* to exit the watch.
-  - This will show the current pods, deployments, deployments and namespaces. `kubectl get pods,deploy,svc,ns -n kube-system`{{execute}}
+There are 3 basic types of deployments. `Deployment`, `DaemonSet` and `StatefulSet`.
 
-In the next step, we will deply the Kubernetes UI (Dashboard).
+In this next step, we will show standard Deployment file written in YAML and how we can interact with this deployment.
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tutum-deployment
+  labels:
+    app: tutum
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tutum
+  template:
+    spec:
+      containers:
+      - name: tutum
+        image: tutum/hello-world
+        ports:
+        - containerPort: 80
+```
+This is a basic Deployment file and that includes the additional instructions to run a ReplicaSet of 2 pods.
+
+Let's deploy this pod from the pre-created manifest file and then see all of the components that were created.
+`kubectl apply -f ./resources/tutum-deployment.yaml`{{execute}}
+
+`kubectl get pods,deploy,rs`{{execute}}
+
+Notice that a pod, a deployment and a replicaset were all created from that one file.

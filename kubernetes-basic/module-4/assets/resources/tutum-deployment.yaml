@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tutum-deployment
+spec:
+  template:
+    spec:
+      containers:
+      - name: tutum
+        image: tutum/hello-world
+        ports:
+        - containerPort: 80

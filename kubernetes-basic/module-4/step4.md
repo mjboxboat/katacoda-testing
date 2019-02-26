@@ -10,6 +10,4 @@ In the Pod spec, we exposed the port 80 of this pod. Let's see if we can get to 
 
 Whoops, looks like that isn't working. Any idea why? If you said "because there is no service yet", then you are correct. We haven't exposed the pod to the outside world using a Kubernetes Service, so it is only available inside the Kubernetes cluster for now.
 
-Lastly, if you deployed the Kubernetes Dashboard in the earlier step, go to it and see if you can locate the Pod and Deploymetn that were created. https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/
-
 That completes the lab for Module 3. In a future lab (Module 5) we will discuss Services. In the next Module (Module 4) we will discuss why you wouldn't want to run singleton pods like we did here and how we can run them using Kubernetes Deployments. Stay tuned.

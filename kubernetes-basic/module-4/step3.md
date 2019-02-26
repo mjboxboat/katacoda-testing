@@ -1,18 +1,28 @@
-Lastly, we will clone a the Vote App Github repo and run the application on the cluster.
+In this step we will create a Pod manifest (also called a Pod spec) using YAML. 
 
-- First, lets clone the Github repo. `git clone https://github.com/dockersamples/example-voting-app.git`{{execute}}
-- Now lets change to that directory and deploy the environment.
-  -  `cd example-voting-app`{{execute}}
-  -  This creates a new namespace called vote. `kubectl create namespace vote`{{execute}}
-  -  This will deploy all of the YAML configurations in the k8s-specification folder. `kubectl apply -f k8s-specifications`{{execute}}
+The following syntax will create a pod using the A.K.M.S. structure we discussed and you will then be able to deploy the pod using this file.
 
-Now lets monitor the deployment status of the Vote components.
-- `watch -n .5 kubectl get pods,deploy,svc -o wide -n vote`{{execute}}
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-nginx
+  labels:
+    app: web
+spec:
+  containers:
+  - name: my-nginx
+    image: nginx:latest
+    ports:
+      - containerPort: 80
+```
+We have already created this file for you, so you can view it by running `nano ./resources/pod.yaml`{{execute}}. Once you are done reviewing, you can exit by pressing `CTRL+X`.
 
-Once they are all running, press *"CTRL+C"* to exit the watch.
+Now, lets deploy the nginx pod using the file. `kubectl apply -f ./resources/pod.yaml`{{execute}}
 
-Lets view the app, vote on a pet, then view the results.
-- To vote, click this link: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/
-- To view results, click this link: https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/
+Again, we can review if the Pod is running and view more information about the Pod using the following commands:
+`kubectl get pods -o wide`{{execute}}
 
-That concludes the Module 2 - Intro To Kubernetes lab. Please reach out to use at BoxBoat if you have any questions of if you are interested in training for your organization. https://boxboat.com/company/contact-us/ 
+`kubectl describe pod my-nginx`{{execute}}
+
+In the next step, we will see if we can access this pod both internally on the cluster an externally from the internet.

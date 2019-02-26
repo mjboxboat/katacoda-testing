@@ -1,5 +1,3 @@
-Welcome to Kubernetes Fundamentals Training - Module 3- Kubernetes Pods
-
 Welcome to the BoxBoat "Kubernetes Training" Basics series. This is Module 3, Kubernetes Pods. This lab will show you how to launch a pod from the kubectl command line, create a pod manifest file and then launch a new pod into Kubernetes. We will then test internal cluster access to this system.
 
 Lets deploy the Kubernetes UI (Dashboard) and so you can have a UI to explore what we are deploying.
