@@ -1,8 +1,8 @@
-Lets deploy the Kubernetes UI (Dashboard) and take a quick look around.
+Lets deploy the Kubernetes UI (Dashboard) and so you can have a UI to explore what we are deploying.
 
-- To deploy the dashboard, run the following command. `kubectl apply -f https://gist.githubusercontent.com/mjboxboat/9601f7aff786f52bce3f4af7e21b8339/raw/572f1c056c9385fb5ebc8a55a64717331028b284/kube-dash.yml`{{execute}}
+- To deploy the dashboard, run the following command. `kubectl apply -f https://gist.githubusercontent.com/mjboxboat/d1d51560c485cdeb500fa1343a211469/raw/0fc3290dfb1fd66d1d2bbd957982999b37d52b6b/kube-dash.yaml`{{execute}}
 - Now we can check to see if the Dashboard pod is running. `kubectl get pods -n kube-system`{{execute}}
 - And we can also check to see what port the Dashboard is exposed on. `kubectl get svc -n kube-system`{{execute}}
-- Once the dashboard is up and running, we can visit the external URL on port 32000 by clicking this link: https://[[HOST_SUBDOMAIN]]-32000-[[KATACODA_HOST]].environments.katacoda.com/
+- Once the dashboard is up and running, we can visit the external URL on port 30000 by clicking this link: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/
 
-In the next step, we will deply the multiple microservice example app called Vote.
+In the next step, we will deploy a single pod using the `kubectl` CLI.
