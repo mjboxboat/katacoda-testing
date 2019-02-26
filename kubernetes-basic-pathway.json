@@ -17,6 +17,16 @@
         "course_id": "module-3",
         "title": "Kubernetes Basic Training: Module 3 - Kubernetes Pods",
         "description": "Demo of how to run containers in Pods on Kubernetes"
+      },
+      {
+        "course_id": "module-4",
+        "title": "Kubernetes Basic Training: Module 4 - Kubernetes Deployments",
+        "description": "Demo of how to run Pods using different deployment types"
+      },
+      {
+        "course_id": "module-5",
+        "title": "Kubernetes Basic Training: Module 5 - Kubernetes Services",
+        "description": "Demo of how to expose Pods outside the cluster using Services"
       }
     ]
   }
