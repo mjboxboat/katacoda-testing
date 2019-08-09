@@ -3,8 +3,8 @@
 # Kubernetes Lab - This is the Advanced Deployment Lab and will cover some of the more complex parts of deployments.
 
 In this lab we will cover:
- - Resource limits
  - Resource requests
+ - Resource limits
  - Readiness probe
  - Liveness probe
  - Rolling updates

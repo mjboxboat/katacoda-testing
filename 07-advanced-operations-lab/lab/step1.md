@@ -29,7 +29,7 @@ On the Mem requested deployment we requested 5G of memory:
             cpu: ".5"
 ```
 
-Let's test this. Run the 2 deployments below, then we let's take a look at any errors we see. Both deployments request much more CPU and Memory than is available.
+Let's test this. Run the 2 deployments below, then we let's take a look at any errors we see. Each deployments request much more CPU and Memory than is available on a single node.
 
 `kubectl apply -f /root/resources/deployment-cpu-requested.yaml`{{execute}}
 
@@ -45,11 +45,15 @@ Describe the pods to see why they aren't scheduled (look at the last line):
 
 `kubectl describe pod mem-`{{execute}}
 
+We can also see this on the Kubernetes Dashboard:
+
+https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com
+
 You can see that they both fail to schedule due to insufficient resources.
 
 The takeaway here is that when thinking about setting the Resource Requests for your pods, make sure that they are realistic and will be able to be met. If there aren't any nodes that can meet the requests, the pods won't run.
 
-Click the links below to cleanup this lab.
+Click the links below to cleanup this section, then proceed to Step 2.
 
 `kubectl delete -f /root/resources/deployment-cpu-requested.yaml`{{execute}}
 

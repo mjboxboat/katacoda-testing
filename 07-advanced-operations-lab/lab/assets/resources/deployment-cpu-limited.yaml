@@ -20,11 +20,7 @@ spec:
         command: ["stress"]
         args: ["--cpu", "1", "-t", "600s"]
         resources:
-          requests:
-            memory: "50M"
-            cpu: "100m"
           limits:
-            memory: "128M"
             cpu: "500m"
 ---
 apiVersion: v1
@@ -32,9 +28,7 @@ kind: Service
 metadata:
   name: cpu-limited-service
 spec:
-  type: NodePort
   ports:
   - port: 8080
-    nodePort: 31000
   selector:
     app: cpu-limited

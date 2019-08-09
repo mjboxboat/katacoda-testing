@@ -15,11 +15,11 @@
     },
     "steps": [
       {
-        "title": "Resource Limits",
+        "title": "Resource Requests",
         "text": "step1.md"
       },
       {
-          "title": "Resource Requests",
+          "title": "Resource Limits",
           "text": "step2.md"
       },
       {
