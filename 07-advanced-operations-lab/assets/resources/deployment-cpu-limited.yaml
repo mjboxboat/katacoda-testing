@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpu-limited
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  cpu-limited
+  template:
+    metadata:
+      labels:
+        app: cpu-limited
+    spec:
+      containers:
+      - name: cpu-limited
+        image: polinux/stress
+        ports:
+        - containerPort: 8080
+        command: ["stress"]
+        args: ["--cpu", "1", "-t", "600s"]
+        resources:
+          requests:
+            memory: "50M"
+            cpu: "100m"
+          limits:
+            memory: "128M"
+            cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cpu-limited-service
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    nodePort: 31000
+  selector:
+    app: cpu-limited

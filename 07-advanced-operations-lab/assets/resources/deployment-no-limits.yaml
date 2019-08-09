@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: no-limits
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  no-limits
+  template:
+    metadata:
+      labels:
+        app: no-limits
+    spec:
+      containers:
+      - name: no-limits
+        image: polinux/stress
+        ports:
+        - containerPort: 8080
+        command: ["stress"]
+        args: ["--vm", "1", "--vm-bytes", "50M", "--vm-hang", "600", "--cpu", "1", "-t", "600s"]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: no-limit-service
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    nodePort: 31000
+  selector:
+    app: no-limits

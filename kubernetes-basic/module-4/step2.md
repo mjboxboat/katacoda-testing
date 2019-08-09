@@ -15,12 +15,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: http-daemonset
+      app: http-daemonset
   template:
     metadata:
       labels:
         app: http-daemonset
     spec:
+      tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/master
       containers:
       - name: http-daemonset
         image: katacoda/docker-http-server
@@ -30,8 +33,12 @@ spec:
 
 Notice that we removed the "replicas" section as this is not relevant to DaemonSets.
 
+Also, we have added a "toleration" to allow this pod to the run on the master.
+
 Let's run the Daemonset and inspect what we get after.
 
 `kubectl apply -f ./resources/http-daemonset.yaml`{{execute}}
 
-`kubectl get pods,daemonset,rs`{{execute}}
+`kubectl get pods,daemonset`{{execute}}
+
+We can see that without defining how many replicas to run, the Daemonset automatically recognized that there were 2 nodes (master and node01) and run 1 pod on each.
