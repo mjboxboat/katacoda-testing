@@ -1,30 +1,33 @@
-Welcome to the BoxBoat Bootcamp! For this lab we will need to install [Traefik - The Cloud Native Edge Router]
-(https://traefik.io/).
+Welcome to the BoxBoat Bootcamp! In this Lab we will be covering Deployments in depth. For more info, visit the official documentation here: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 
-We will learn how to use the Traefik edge router as an ingress controller for host/path based routing and traffic shaping.
+Config files are located in `./resources`. Please take time to review them.
 
-We have configuration files for labs in `./resources/`. These will deploy the RBAC, DaemonSet and the Ingress.
+You should already be familiar with Kubernetes Deployments by now, but this lab should help add some additional features and functionality to basic deployments.
 
-Let's begin.
+In this first section we will cover Resource Requests. Requests are the minimum available requirements that should be met for CPU and Memory for a pod to be scheduled on a node. If there aren't any nodes available that can handle the request, then the pod cannot be scheduled.
 
-First we need to configure authorization using RBAC
+Let's test this. Run the 2 deployments below, then we let's take a look at any errors we see. Both deployments request much more CPU and Memory than is available.
 
-`kubectl apply -f ./resources/traefik-rbac.yaml`{{execute}}
+`kubectl apply -f /root/resources/deployment-cpu-requested`{{execute}}
 
-Second we deploy Traefik container
-`kubectl apply -f ./resources/traefik-daemonset.yaml`{{execute}}
+`kubectl apply -f /root/resources/deployment-mem-requested`{{execute}}
 
-Finally we configure the ingress
-`kubectl apply -f ./resources/traefik-webui.yaml`{{execute}}
+Check the status and you will see both are "Pending":
 
-You can check to make sure the Traefik dashboard is working here: https://[[HOST2_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+`kubectl get pods`{{execute}}
 
-Next we will deploy a sample nginx application consisting of three components:
-- "default": which will be used as a default reply
-- "green" and "blue": which will be used as alternative destinations, depending on rules
+Then describe the pods to see why they aren't scheduled:
 
-`kubectl apply -f ./resources/nginx-default.yaml`{{execute}}
-`kubectl apply -f ./resources/nginx-blue.yaml`{{execute}}
-`kubectl apply -f ./resources/nginx-green.yaml`{{execute}}
+`kubectl describe pod cpu-`{{execute}}
 
+`kubectl describe pod mem-`{{execute}
 
+You can see that they both fail to schedule due to insufficient resources. 
+
+The takeaway here is that when thinking about setting the Resource Requests for your pods, make sure that they are realistic and will be able to be met. If there aren't any nodes that can meet the requests, the pods won't run.
+
+Click the links below to cleanup this lab.
+
+`kubectl delete -f /root/resources/deployment-cpu-requested`{{execute}}
+
+`kubectl delete -f /root/resources/deployment-mem-requested`{{execute}}

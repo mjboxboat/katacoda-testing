@@ -11,4 +11,5 @@ minikube addons enable heapster
 minikube addons enable metrics-server
 minikube addons enable dashboard
 kubectl apply -f /root/resources/dashboard.yaml
+source <(kubectl completion bash)
 
