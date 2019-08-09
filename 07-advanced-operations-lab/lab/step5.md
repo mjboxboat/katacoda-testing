@@ -69,8 +69,5 @@ Watch the rollout:
 
 `kubectl rollout status deployments/nginx`{{execute}}
 
-And finally verify we are back on V1:
-
-https://[[HOST_SUBDOMAIN]]-32005-[[KATACODA_HOST]].environments.katacoda.com/
 
 This completes the Advanced Deployments Lab. Please let your instructors know if you have any questions.

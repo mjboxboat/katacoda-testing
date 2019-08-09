@@ -3,7 +3,7 @@
   "description": "This is the Advanced Deployment Lab and will cover some of the more complex parts of deployments",
   "icon": "fa-kubernetes",
   "difficulty": "advanced",
-  "time": "10-15 minutes",
+  "time": "20-25 minutes",
   "details": {
     "assets": {
       "host01": [
@@ -49,7 +49,7 @@
     "showdashboard": true,
     "dashboards": [{"name": "Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com"}],
     "uisettings": "yaml",
-    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training. Please wait 60 seconds for the lab to be ready.\u001b[0m"
+    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training. Please wait 120 seconds for the lab to be ready.\u001b[0m"
   },
   "backend": {
     "imageid": "minikube"
