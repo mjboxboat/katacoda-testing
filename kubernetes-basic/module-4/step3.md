@@ -14,10 +14,11 @@ metadata:
   labels:
     app: http
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: http-statefulset
+  serviceName: "http-statefulset"
+  replicas: 3
   template:
     metadata:
       labels:
@@ -34,6 +35,14 @@ We can see that this is almost exactly the same as the Deployment spec with just
 
 Let's deploy the StatefulSet and see it differs from the standard Deployment.
 
-`kubectl apply -f ./resource/http-statefulset.yaml`{{execute}}
+`kubectl apply -f ./resources/http-statefulset.yaml`{{execute}}
 
-`kubectl get pods,sts`{{execute}}
+`kubectl get pods,sts,svc`{{execute}}
+
+Notice that the pods are created with the podname-0, podname-1, etc moniker. This is unique about statefulsets. If you still have your standard deployment pods running, you can see that those have a unique hash after the base Pod name. Even if destroyed, the Statefulset pods will retain that name when they are recreated. This comes in handy when running stateful applications that cannot tolerate random Pod naming.
+
+Also, the DaemonSet type brings up Service creation to address the pods.
+
+This completes Module 4. In Module 5, we will cover exposing Pods via Kubernetes Services.
+
+Visit the BoxBoat blog for more Kubernetes and DevOps content: https://boxboat.com/blog/

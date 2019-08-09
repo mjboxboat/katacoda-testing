@@ -1,0 +1,57 @@
+{
+  "title": "Advanced Deployment Lab",
+  "description": "This is the Advanced Deployment Lab and will cover some of the more complex parts of deployments",
+  "icon": "fa-kubernetes",
+  "difficulty": "advanced",
+  "time": "10-15 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Resource Limits",
+        "text": "step1.md"
+      },
+      {
+          "title": "Resource Requests",
+          "text": "step2.md"
+      },
+      {
+          "title": "Readiness Probes",
+          "text": "step3.md"
+      },
+      {
+          "title": "Livesness Probes",
+          "text": "step4.md"
+      },
+      {
+        "title": "Rolling Updates",
+        "text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": "Please email feedback to: `training@boxboat.com`",
+      "courseData": "startup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com"}],
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training. Please wait 30 seconds for the lab to be ready.\u001b[0m"
+  },
+  "backend": {
+    "imageid": "minikube-running"
+  }
+}
