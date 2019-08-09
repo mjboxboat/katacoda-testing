@@ -26,9 +26,9 @@ Check on the status of the pods. Initially you will see that the memory pod is o
 
 Let's see the resources being used by the pods:
 
-`kubectl top pods cpu-`{{execute}}
+`kubectl top pod cpu-`{{execute}}
 
-`kubectl top pods mem-`{{execute}}
+`kubectl top pod mem-`{{execute}}
 
 The CPU pod should show it is using 500m (millicores, or .5 of 1 CPU) even though the process running inside wants 1 whole CPU. The memory pod doesn't even have time to show metrics because it is constantly being OOMKilled and restarted.
 

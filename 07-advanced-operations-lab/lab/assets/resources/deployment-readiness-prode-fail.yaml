@@ -1,0 +1,27 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: readiness-probe-fail
+  namespace: default
+  labels:
+    app: readiness-probe-fail
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: readiness-probe-fail
+  template:
+    metadata:
+      labels:
+        app: readiness-probe-fail
+    spec:
+      containers:
+      - name: readiness-probe-fail
+        image: k8s.gcr.io/goproxy:0.1
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          tcpSocket:
+            port: 8081
+          initialDelaySeconds: 10
+          periodSeconds: 10
