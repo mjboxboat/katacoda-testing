@@ -1,0 +1,13 @@
+{
+  "title": "Advanced Operations",
+  "description": "Learn the basics of Kubernetes Architecture, controllers, and objects in this introductory course.",
+  "icon": "fa-katacoda",
+  "private": true,
+  "courses": [
+    {
+      "course_id": "lab",
+      "title": "First Kubernetes Lab",
+      "description": "An Introduction to Katacoda and Kubernetes"
+    }
+  ]
+}
