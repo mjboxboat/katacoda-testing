@@ -49,9 +49,9 @@
     "showdashboard": true,
     "dashboards": [{"name": "Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com"}],
     "uisettings": "yaml",
-    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training. Please wait 30 seconds for the lab to be ready.\u001b[0m"
+    "uimessage1": "\u001b[36;1mWelcome to BoxBoat training. Please wait 60 seconds for the lab to be ready.\u001b[0m"
   },
   "backend": {
-    "imageid": "minikube-running"
+    "imageid": "minikube"
   }
 }
